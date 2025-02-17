@@ -1,0 +1,13 @@
+Main (Control, Main.gd)
+└── VBoxContainer
+    ├── Dealer_Hand (HBoxContainer)  
+    ├── Player_Hand (HBoxContainer)
+    ├── GameOverLabel (Label)  
+    ├── HitButton (Button)  
+    ├── StandButton (Button) 
+
+
+Card (Sprite2D, card.gd)
+└── Label (Label)
+└── PlayerHand (Label)
+└── DealerHand (Label)
