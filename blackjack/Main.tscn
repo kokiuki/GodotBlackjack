@@ -1,0 +1,206 @@
+[gd_scene load_steps=7 format=3 uid="uid://bunl7a7w4m7ub"]
+
+[ext_resource type="Script" uid="uid://bif2508x1j4gu" path="res://main.gd" id="1_trh40"]
+[ext_resource type="Texture2D" uid="uid://bpkohjfty4nf7" path="res://Assets/Table_background.png" id="2_fslxb"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_tyaa4"]
+font_size = 100
+
+[sub_resource type="LabelSettings" id="LabelSettings_pxy5j"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_hmvx2"]
+font_size = 25
+
+[sub_resource type="LabelSettings" id="LabelSettings_4ipg5"]
+font_size = 25
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_vertical = 3
+script = ExtResource("1_trh40")
+metadata/_edit_use_anchors_ = true
+
+[node name="Background" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_fslxb")
+expand_mode = 3
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_right = 100.0
+grow_vertical = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Player_Hand" type="HBoxContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="."]
+layout_direction = 2
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+grow_horizontal = 0
+grow_vertical = 2
+size_flags_vertical = 0
+alignment = 1
+
+[node name="Dealer_Hand" type="HBoxContainer" parent="VBoxContainer2"]
+layout_direction = 3
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_constants/separation = 5
+alignment = 1
+
+[node name="Ready Button" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = 31.0
+offset_right = 50.0
+offset_bottom = 81.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "READY"
+
+[node name="AutoReadyTimer" type="Timer" parent="Ready Button"]
+
+[node name="HitButton" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -100.0
+offset_top = -535.0
+offset_bottom = -485.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Hit"
+
+[node name="StandButton" type="Button" parent="."]
+visible = false
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 2.0
+offset_top = -535.0
+offset_right = 102.0
+offset_bottom = -485.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 6
+text = "Stand"
+
+[node name="GoBackButton" type="Button" parent="."]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -50.0
+offset_top = -25.0
+offset_right = 50.0
+offset_bottom = 25.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "GO BACK
+"
+
+[node name="Buttons" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -757.0
+offset_top = -280.0
+offset_right = -698.0
+offset_bottom = -179.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="GameOverLabel" type="Label" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -71.0
+offset_top = 269.0
+offset_right = 71.0
+offset_bottom = 406.0
+grow_horizontal = 2
+label_settings = SubResource("LabelSettings_tyaa4")
+
+[node name="Labels" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -105.0
+offset_top = 60.0
+offset_right = 336.0
+offset_bottom = 275.0
+grow_horizontal = 2
+
+[node name="Score Label" type="Label" parent="Labels"]
+layout_mode = 2
+size_flags_horizontal = 0
+text = "Wins: 0 | Losses: 0"
+label_settings = SubResource("LabelSettings_pxy5j")
+
+[node name="PlayerHandValue" type="Label" parent="Labels"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Player:
+"
+label_settings = SubResource("LabelSettings_hmvx2")
+
+[node name="DealerHand Value" type="Label" parent="Labels"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Dealer:
+"
+label_settings = SubResource("LabelSettings_4ipg5")

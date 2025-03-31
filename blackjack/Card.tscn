@@ -1,0 +1,18 @@
+[gd_scene load_steps=2 format=3 uid="uid://ciikymew14olj"]
+
+[ext_resource type="Script" uid="uid://cxhpgtn5tj1i8" path="res://card.gd" id="2_ogpd1"]
+
+[node name="TextureRect" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_ogpd1")
+
+[node name="PlayerHand" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="DealerHand" type="Label" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

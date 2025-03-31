@@ -1,0 +1,187 @@
+[gd_scene load_steps=9 format=3 uid="uid://c0lk80vg24g6u"]
+
+[ext_resource type="Script" uid="uid://b075h01hs7t8q" path="res://main_menu.gd" id="1_n16ia"]
+[ext_resource type="Texture2D" uid="uid://bpkohjfty4nf7" path="res://Assets/Table_background.png" id="2_egosa"]
+[ext_resource type="Texture2D" uid="uid://ctfg48qcccm1s" path="res://Assets/Card_textures/clubs_of_A.png" id="3_b2m0m"]
+[ext_resource type="Texture2D" uid="uid://cepabhtnb36xs" path="res://Assets/Card_textures/spades_of_A.png" id="4_gnbly"]
+[ext_resource type="Texture2D" uid="uid://wdfuffushtei" path="res://Assets/Card_textures/diamonds_of_A.png" id="5_6s3fm"]
+[ext_resource type="Texture2D" uid="uid://b7kc2or8lxrsg" path="res://Assets/Card_textures/hearts_of_A.png" id="6_x7web"]
+
+[sub_resource type="FontFile" id="FontFile_xrtsm"]
+cache/0/70/0/ascent = 0.0
+cache/0/70/0/descent = 0.0
+cache/0/70/0/underline_position = 0.0
+cache/0/70/0/underline_thickness = 0.0
+cache/0/70/0/scale = 1.0
+cache/0/16/0/ascent = 0.0
+cache/0/16/0/descent = 0.0
+cache/0/16/0/underline_position = 0.0
+cache/0/16/0/underline_thickness = 0.0
+cache/0/16/0/scale = 1.0
+cache/0/150/0/ascent = 0.0
+cache/0/150/0/descent = 0.0
+cache/0/150/0/underline_position = 0.0
+cache/0/150/0/underline_thickness = 0.0
+cache/0/150/0/scale = 1.0
+cache/0/50/0/ascent = 0.0
+cache/0/50/0/descent = 0.0
+cache/0/50/0/underline_position = 0.0
+cache/0/50/0/underline_thickness = 0.0
+cache/0/50/0/scale = 1.0
+cache/0/100/0/ascent = 0.0
+cache/0/100/0/descent = 0.0
+cache/0/100/0/underline_position = 0.0
+cache/0/100/0/underline_thickness = 0.0
+cache/0/100/0/scale = 1.0
+
+[sub_resource type="LabelSettings" id="LabelSettings_udon8"]
+font = SubResource("FontFile_xrtsm")
+font_size = 100
+shadow_size = 4
+shadow_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+shadow_offset = Vector2(5, 2)
+
+[node name="Main Menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n16ia")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 3.0
+offset_right = 3.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_egosa")
+
+[node name="Game Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -608.0
+offset_top = -505.0
+offset_right = 608.0
+offset_bottom = -102.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "MY AWESOME 
+BLACKJACK GAME"
+label_settings = SubResource("LabelSettings_udon8")
+horizontal_alignment = 1
+
+[node name="Difficulty Selection" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -307.0
+offset_top = -11.0
+offset_right = 293.0
+offset_bottom = 167.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 14
+
+[node name="Easy" type="Button" parent="Difficulty Selection"]
+custom_minimum_size = Vector2(100, 50)
+layout_mode = 2
+text = "EASY"
+
+[node name="Normal" type="Button" parent="Difficulty Selection"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "NORMAL"
+
+[node name="Hard" type="Button" parent="Difficulty Selection"]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 2
+text = "HARD"
+
+[node name="Tutorial" type="Button" parent="."]
+custom_minimum_size = Vector2(0, 50)
+layout_mode = 1
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 445.0
+offset_top = -212.0
+offset_right = 695.0
+offset_bottom = -162.0
+grow_vertical = 0
+text = "TUTORIALS"
+
+[node name="Quit Game" type="Button" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -140.0
+offset_right = 125.0
+offset_bottom = -90.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "QUIT GAME"
+
+[node name="Start Game" type="Button" parent="."]
+custom_minimum_size = Vector2(50, 50)
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -723.0
+offset_top = -218.0
+offset_right = -473.0
+offset_bottom = -168.0
+grow_horizontal = 0
+grow_vertical = 0
+text = "START GAME"
+
+[node name="ClubsA" type="Sprite2D" parent="."]
+position = Vector2(251, 628.5)
+texture = ExtResource("3_b2m0m")
+
+[node name="SpadeA" type="Sprite2D" parent="."]
+position = Vector2(351, 499.5)
+texture = ExtResource("4_gnbly")
+
+[node name="DiamondA" type="Sprite2D" parent="."]
+position = Vector2(351, 692.5)
+texture = ExtResource("5_6s3fm")
+
+[node name="HeartsA" type="Sprite2D" parent="."]
+position = Vector2(464, 644.5)
+texture = ExtResource("6_x7web")
+
+[node name="ClubsA2" type="Sprite2D" parent="."]
+position = Vector2(1439.5, 636.5)
+texture = ExtResource("3_b2m0m")
+
+[node name="SpadeA2" type="Sprite2D" parent="."]
+position = Vector2(1539.5, 507.5)
+texture = ExtResource("4_gnbly")
+
+[node name="DiamondA2" type="Sprite2D" parent="."]
+position = Vector2(1539.5, 700.5)
+texture = ExtResource("5_6s3fm")
+
+[node name="HeartsA2" type="Sprite2D" parent="."]
+position = Vector2(1652.5, 652.5)
+texture = ExtResource("6_x7web")
